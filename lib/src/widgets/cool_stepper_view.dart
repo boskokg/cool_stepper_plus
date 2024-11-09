@@ -24,6 +24,7 @@ class CoolStepperView extends StatelessWidget {
   final bool hasRoundedCorner;
 
   const CoolStepperView({
+    super.key,
     required this.step,
     required this.contentPadding,
     required this.config,
@@ -36,7 +37,7 @@ class CoolStepperView extends StatelessWidget {
     /// [header] contains title, description and icon
     final header = Container(
       width: double.infinity,
-      padding: EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(20.0),
       decoration: BoxDecoration(
         color: config.headerColor,
       ),
@@ -47,7 +48,7 @@ class CoolStepperView extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: Text(
                   step.title.toUpperCase(),
@@ -55,11 +56,11 @@ class CoolStepperView extends StatelessWidget {
                   maxLines: 2,
                 ),
               ),
-              SizedBox(width: 5.0),
+              const SizedBox(width: 5.0),
               config.icon,
             ],
           ),
-          SizedBox(height: 5.0),
+          const SizedBox(height: 5.0),
           Text(
             step.subtitle,
             style: config.subtitleTextStyle,

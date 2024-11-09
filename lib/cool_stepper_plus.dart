@@ -44,6 +44,7 @@ class CoolStepper extends StatefulWidget {
   final bool hasRoundedCorner;
 
   const CoolStepper({
+    super.key,
     required this.steps,
     this.onCompleted,
     this.contentPadding = EdgeInsets.zero,
@@ -108,14 +109,14 @@ class CoolStepperState extends State<CoolStepper> {
     final flush = Flushbar(
       message: validation(),
       flushbarStyle: FlushbarStyle.FLOATING,
-      margin: EdgeInsets.all(8.0),
-      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+      margin: const EdgeInsets.all(8.0),
+      borderRadius: const BorderRadius.all(Radius.circular(8.0)),
       icon: Icon(
         Icons.info_outline,
         size: 28.0,
         color: Theme.of(context).primaryColor,
       ),
-      duration: Duration(seconds: 2),
+      duration: const Duration(seconds: 2),
       leftBarIndicatorColor: Theme.of(context).primaryColor,
     );
     flush.show(context);
