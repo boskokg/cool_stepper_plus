@@ -1,4 +1,4 @@
-# Cool Stepper Reloaded
+# Cool Stepper Plus
 
 [![Pub Version](https://img.shields.io/pub/v/cool_stepper_plus)](https://pub.dev/packages/cool_stepper_plus)
 
