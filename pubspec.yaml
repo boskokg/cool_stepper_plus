@@ -1,0 +1,22 @@
+name: cool_stepper_plus
+description: "CoolStepper Plus is a new widget based on CoolStepper and CoolStepper Reloaded, that displays a step by step sequence of operations. it could be helpful for a form wizard or onboarding."
+version: 3.2.7
+homepage: https://github.com/boskokg/cool-stepper-plus/
+repository: https://github.com/boskokg/cool-stepper-plus/
+
+environment:
+  sdk: ^3.5.4
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  another_flushbar: ^1.12.29
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:

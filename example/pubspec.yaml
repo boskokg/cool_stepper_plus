@@ -1,0 +1,26 @@
+name: cool_stepper_example
+description: "A new Flutter project."
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  cool_stepper_plus:
+    path: ../
+
+  another_flushbar: ^1.10.17
+  ripple_button: ^2.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
