@@ -1,3 +1,6 @@
+## [3.2.8] - 09/11/2024
+- Added [subtitleTextAlign] to [config]
+
 ## [3.2.7] - 09/11/2024
 - Added [titleTextAlign] to [config]
 

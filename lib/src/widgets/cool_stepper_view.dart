@@ -62,9 +62,13 @@ class CoolStepperView extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 5.0),
-          Text(
-            step.subtitle,
-            style: config.subtitleTextStyle,
+          Align(
+            alignment: config.subtitleTextAlign,
+            child: Text(
+              step.subtitle,
+              style: config.subtitleTextStyle,
+              textAlign: TextAlign.end,
+            ),
           )
         ],
       ),
