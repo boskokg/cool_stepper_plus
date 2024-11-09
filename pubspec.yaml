@@ -1,6 +1,6 @@
 name: cool_stepper_plus
 description: "CoolStepper Plus is a new widget based on CoolStepper and CoolStepper Reloaded, that displays a step by step sequence of operations. it could be helpful for a form wizard or onboarding."
-version: 3.2.7
+version: 3.2.8
 homepage: https://github.com/boskokg/cool-stepper-plus/
 repository: https://github.com/boskokg/cool-stepper-plus/
 
