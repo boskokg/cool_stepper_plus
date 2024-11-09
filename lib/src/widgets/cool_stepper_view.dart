@@ -53,6 +53,7 @@ class CoolStepperView extends StatelessWidget {
                 child: Text(
                   step.title.toUpperCase(),
                   style: config.titleTextStyle,
+                  textAlign: config.titleTextAlign,
                   maxLines: 2,
                 ),
               ),
@@ -89,7 +90,10 @@ class CoolStepperView extends StatelessWidget {
     return (isHeaderEnabled)
         ? Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [header, Expanded(child: body)],
+            children: [
+              header,
+              Expanded(child: body),
+            ],
           )
         : body;
   }

@@ -1,3 +1,6 @@
+## [3.2.7] - 09/11/2024
+- Added [titleTextAlign] to [config]
+
 ## [3.2.6] - 10/11/2022
 - Fix analysis
 

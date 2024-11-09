@@ -71,6 +71,9 @@ class CoolStepperConfig {
   /// This is the textStyle for the title text
   final TextStyle titleTextStyle;
 
+  /// How the text should be aligned horizontally for the title text.
+  final TextAlign? titleTextAlign;
+
   /// This is the textStyle for the subtitle text
   final TextStyle subtitleTextStyle;
 
@@ -107,6 +110,7 @@ class CoolStepperConfig {
       fontWeight: FontWeight.bold,
       color: Color(0x61000000),
     ),
+    this.titleTextAlign,
     this.subtitleTextStyle = const TextStyle(
       fontSize: 14.0,
       fontWeight: FontWeight.w600,
