@@ -136,7 +136,7 @@ class CoolStepperState extends State<CoolStepper> {
     final content = Expanded(
       child: PageView(
         controller: _controller,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: widget.steps.map((step) {
           return CoolStepperView(
             step: step,
@@ -149,16 +149,14 @@ class CoolStepperState extends State<CoolStepper> {
       ),
     );
 
-    final counter = Container(
-      child: Text(
-        '${widget.config.stepText} ${currentStep + 1} ${widget.config.ofText} ${widget.steps.length}',
-        style: widget.config.stepOfTextStyle,
-      ),
+    final counter = Text(
+      '${widget.config.stepText} ${currentStep + 1} ${widget.config.ofText} ${widget.steps.length}',
+      style: widget.config.stepOfTextStyle,
     );
 
-    String _getFinishLabel() => widget.config.finalText;
+    String getFinishLabel() => widget.config.finalText;
 
-    String _getNextLabel() {
+    String getNextLabel() {
       String nextLabel;
 
       if (widget.config.nextTextList != null) {
@@ -170,7 +168,7 @@ class CoolStepperState extends State<CoolStepper> {
       return nextLabel;
     }
 
-    String _getPreviousLabel() {
+    String getPreviousLabel() {
       String backLabel;
 
       if (widget.config.backTextList != null) {
@@ -182,16 +180,16 @@ class CoolStepperState extends State<CoolStepper> {
       return backLabel;
     }
 
-    Widget _backButton() {
+    Widget backButton() {
       return GestureDetector(
         onTap: onStepBack,
         child: AbsorbPointer(
           child: AnimatedOpacity(
-            duration: Duration(milliseconds: 200),
+            duration: const Duration(milliseconds: 200),
             opacity: _isFirst(currentStep) ? 0.0 : 1.0,
             child: widget.config.backButton ??
                 Text(
-                  _getPreviousLabel(),
+                  getPreviousLabel(),
                   style: widget.config.backTextStyle,
                 ),
           ),
@@ -199,14 +197,14 @@ class CoolStepperState extends State<CoolStepper> {
       );
     }
 
-    Widget _nextButton() {
+    Widget nextButton() {
       if (_isLast(currentStep)) {
         return GestureDetector(
           onTap: onStepNext,
           child: AbsorbPointer(
             child: widget.config.finishButton ??
                 Text(
-                  _getFinishLabel(),
+                  getFinishLabel(),
                   style: widget.config.nextTextStyle,
                 ),
           ),
@@ -217,7 +215,7 @@ class CoolStepperState extends State<CoolStepper> {
           child: AbsorbPointer(
             child: widget.config.nextButton ??
                 Text(
-                  _getNextLabel(),
+                  getNextLabel(),
                   style: widget.config.nextTextStyle,
                 ),
           ),
@@ -225,24 +223,20 @@ class CoolStepperState extends State<CoolStepper> {
       }
     }
 
-    final buttons = Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          _backButton(),
-          counter,
-          _nextButton(),
-        ],
-      ),
+    final buttons = Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        backButton(),
+        counter,
+        nextButton(),
+      ],
     );
 
-    return Container(
-      child: Column(
-        children: [
-          content,
-          buttons,
-        ],
-      ),
+    return Column(
+      children: [
+        content,
+        buttons,
+      ],
     );
   }
 }

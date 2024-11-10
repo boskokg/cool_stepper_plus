@@ -11,7 +11,8 @@ class RoundedCornerContainer extends StatelessWidget {
   final Color insideColor;
   final BorderRadius borderRadius;
 
-  RoundedCornerContainer({
+  const RoundedCornerContainer({
+    super.key,
     required this.child,
     this.padding,
     this.height,
