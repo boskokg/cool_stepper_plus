@@ -11,11 +11,11 @@ This project was forked from [Cool Stepper](https://github.com/emrade/flutter-co
 
 ### **Header** enabled and with default button
 
-<img src="https://raw.githubusercontent.com/emrade/flutter-cool-stepper/master/screenshots/1.png" width="150"/>  <img src="https://raw.githubusercontent.com/emrade/flutter-cool-stepper/master/screenshots/2.png" width="150"/>
+<img src="https://raw.githubusercontent.com/boskokg/cool_stepper_plus/master/screenshots/1.png" width="150"/>  <img src="https://raw.githubusercontent.com/boskokg/cool_stepper_plus/master/screenshots/2.png" width="150"/>
 
 
 ### **Header** disabled and with custom button [Ripple Button](https://pub.dev/packages/ripple_button)
-<img src="https://user-images.githubusercontent.com/6011385/119211643-cdbe0380-ba89-11eb-9520-92e2e369c5d3.png" width="150"/>  <img src="https://user-images.githubusercontent.com/6011385/119211557-38227400-ba89-11eb-9233-142270d1028c.png" width="150"/>
+<img src="https://raw.githubusercontent.com/boskokg/cool_stepper_plus/master/screenshots/4.png" width="150"/>  <img src="https://raw.githubusercontent.com/boskokg/cool_stepper_plus/master/screenshots/5.png" width="150"/>
 
 ### Example
 
@@ -69,17 +69,19 @@ validation: () {
 ### CoolStepperConfig Properties
 
 | Attribute         | Data type    | Description                                                                                                                                                                                     |                                Default Value                                |
-| :---------------- | :----------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------: |
+| :---------------- |:-------------| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:---------------------------------------------------------------------------:|
 | backText          | String       | The text that should be displayed for the back button                                                                                                                                           |                                    BACK                                     |
 | nextText          | String       | The text that should be displayed for the next button                                                                                                                                           |                                    NEXT                                     |
 | finalText         | String       | The text that should be displayed for the next button on the final step                                                                                                                         |                                   FINISH                                    |
 | stepText          | String       | The text that describes the progress                                                                                                                                                            |                                    STEP                                     |
 | ofText            | String       | The text that describes the progress                                                                                                                                                            |                                     OF                                      |
 | headerColor       | Color        | This is the background color of the header                                                                                                                                                      |               Theme.of(context).primaryColor.withOpacity(0.1)               |
-| (**DEPRECATED**) iconColor - Use icon instead.         | Color        | This is the color of the icon. **Warning:** This will be removed soon, use icon instead                                                                                                                                                                   |                                Color.black38                                |
+| (**DEPRECATED**) iconColor - Use icon instead.         | Color        | This is the color of the icon. **Warning:** This will be removed soon, use icon instead                                                                    |                                Color.black38                                |
 | icon              | Icon         | This icon replaces the default icon                                                                                                                                                             |              Icon(Icons.help_outline,size: 18,Colors.black38)               |
 | titleTextStyle    | TextStyle    | This is the textStyle for the title text                                                                                                                                                        | TextStyle(fontSize: 16.0,fontWeight: FontWeight.bold,color: Colors.black38) |
+| titleTextAlign    | TextAlign?   | How the text should be aligned horizontally for the title text.                                                                                                                                 |                                    null                                     |
 | subtitleTextStyle | TextStyle    | This is the textStyle for the subtitle text                                                                                                                                                     |  TextStyle(fontSize: 14.0,fontWeight: FontWeight.w600,color: Colors.black)  |
+| subtitleTextAlign | Alignment    | How the text should be aligned horizontally for the title text.                                                                                                                                 |                            Alignment.centerLeft                             |
 | backTextList      | List<String> | A List of string that when supplied will override 'backText'. Must be one less than the number of steps since for the first step, the backText won't be visible                                 |                                    null                                     |
 | nextTextList      | List<String> | A List of string that when supplied will override 'nextText'Must be one less than the number of steps since the 'finalText' attribute is able to set the value for the final step's next button |                                    null                                     |
 
@@ -87,7 +89,6 @@ validation: () {
 - [x] Added TextStyle parameter to customize to Next Button(2.2.0)
 - [x] Added TextStyle parameter to customize to Back Button (2.2.0)
 - [ ] Added TextStyle parameter to customize to Steps x of N
-- [ ] Added Option to change button background color for Next Button
 - [ ] Added Option to change button background color for Next Button
 
 Please open an issue if something doesn't work or is not clear enough.
