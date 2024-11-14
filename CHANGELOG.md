@@ -1,3 +1,6 @@
+## [3.2.9] - 14/11/2024
+- Fixed bad text align of title when centered
+
 ## [3.2.8] - 09/11/2024
 - Added [subtitleTextAlign] to [config]
 
